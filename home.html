@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Speech Solution</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, 0.8)),
+        url('img/ai.jpg') no-repeat center center / cover;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s;
+    }
+
+    .hero .btn {
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .hero .btn-primary {
+      background-color: #f7b42c;
+      color: #141e30;
+    }
+
+    .hero .btn-primary:hover {
+      background-color: #ffcc70;
+    }
+
+    .features {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .features .feature-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      animation: slideIn 1s;
+    }
+
+    .features .feature-box i {
+      font-size: 3rem;
+      color: #f7b42c;
+      margin-right: 20px;
+    }
+
+    .features .feature-box p {
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    footer p {
+      margin: 0;
+      color: white;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+
+      .features .feature-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .features .feature-box i {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .features h2 {
+        font-size: 1.5rem;
+      }
+
+      .features .feature-box p {
+        font-size: 0.9rem;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: #f7b42c;">Speech Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="text_to_audio/index.html">Convert Text </a></li>
+            <li class="nav-item"><a class="nav-link" href="voice_to_text/index.html">Convert Voice</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Transform Text and Speech & Voice to Text Seamlessly</h1>
+    <p>Experience cutting-edge AI for Text-to-Speech and Speech-to-Text conversions.</p>
+    <a href="text_to_audio/index.html" class="btn btn-primary">Text to Audio</a><br>
+    <a href="voice_to_text/index.html" class="btn btn-primary">Voice to Text</a>
+
+  </div>
+
+  <section class="features" id="features">
+    <h2>Text to Audio</h2>
+    <div class="feature-box">
+      <i class="fas fa-microphone"></i>
+      <p>Convert your text into natural, AI-driven speech with options to customize voice, speed, and pitch.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-sliders-h"></i>
+      <p>Experience robust Speech-to-Text capabilities that transcribe audio accurately and efficiently.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-headphones-alt"></i>
+      <p>Interactive UI designed for both beginners and professionals, with mobile responsiveness.</p>
+    </div>
+  </section>
+
+  <section class="features" id="audio-to-text">
+    <h2>Voice to Text</h2>
+    <div class="feature-box">
+      <i class="fas fa-wave-square"></i>
+      <p>Real-time transcription with our AI-powered engine.</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-file-audio"></i>
+      <p>Generating Text file option enables to download the Audio as a text file.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Speech Solutions. Project Done by Pavithra.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
